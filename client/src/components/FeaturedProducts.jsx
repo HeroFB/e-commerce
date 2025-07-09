@@ -11,7 +11,7 @@ const FeaturedProducts = () => {
           {products.filter((product)=> product.inStock).slice(0,5).map((product, index)=>(
             <ProductCard key={index} product={product}/>
           ))}
-          <ProductCard product={products[0]}/>
+          
         </div>
     </div>
   )
