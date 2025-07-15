@@ -68,9 +68,16 @@ const Cart = () => {
                             </div>
                         </div>
                         <p className="text-center">{currency}{product.offerPrice * product.quantity}</p>
-                        <button onClick={()=> removeFromCart(product._id)} className="cursor-pointer mx-auto">
+                        {/* <button onClick={()=> removeFromCart(product._id)} className="cursor-pointer mx-auto">
                             
                             <img src={assets.remove_icon} alt="remove" className="inline-block w-6 h-6" />
+                        </button> */}
+                        <button onClick={() => removeFromCart(product._id)} className="cursor-pointer mx-auto">{
+                            
+                            getCartCount() === 1 ? (<img src={assets.remove_icon} alt="remove" className="inline-block w-6 h-6" />
+                            ):(
+                            <img src={assets.arrow_right_icon_colored} alt="remove" className="inline-block w-6 h-6" />)
+                            }
                         </button>
                     </div>)
                 )}
