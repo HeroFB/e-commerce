@@ -31,7 +31,6 @@ const Cart = () => {
         }
     },[products, cartItems])
 
-
     return products.length > 0 && cartItems ? (
         <div className="flex flex-col md:flex-row mt-16">
             <div className='flex-1 max-w-4xl'>
@@ -70,6 +69,7 @@ const Cart = () => {
                         </div>
                         <p className="text-center">{currency}{product.offerPrice * product.quantity}</p>
                         <button onClick={()=> removeFromCart(product._id)} className="cursor-pointer mx-auto">
+                            
                             <img src={assets.remove_icon} alt="remove" className="inline-block w-6 h-6" />
                         </button>
                     </div>)
