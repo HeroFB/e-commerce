@@ -18,10 +18,10 @@ const Navbar = () => {
         }
     },[searchQuery])
   return (
-    <nav className="flex items-center justify-between px-6 md:px-16 lg:px-24 xl:px-32 py-4 border-b border-gray-300 bg-white relative transition-all">
+    <nav className="flex items-center justify-between px-6 md:px-16 lg:px-24 xl:px-32 py-4 border-b border-gray-300 bg-gradient-to-l from-[#f9f9f9] to-[#f6f2ed] relative transition-all">
 
             <NavLink to='/' onClick={()=> setOpen(false)}>
-                <img className="h-9" src={assets.logo} alt="logo" />
+                <img className="h-12" src={assets.logo2} alt="logo" />
             </NavLink>
 
             {/* Desktop Menu */}
@@ -40,7 +40,7 @@ const Navbar = () => {
                     <button className="absolute -top-2 -right-3 text-xs text-white bg-primary w-[18px] h-[18px] rounded-full">{getCartCount()}</button>
                 </div>
 
-               {!user ? (<button onClick={()=> setShowUserLogin(true)} className="cursor-pointer px-8 py-2 bg-primary hover:bg-primary-dull transition text-white rounded-full">
+               {!user ? (<button onClick={()=> setShowUserLogin(true)} className="tracking-wide font-medium cursor-pointer px-8 py-2 bg-gradient-to-l from-primary to-primary-dull hover:bg-primary-dull transition text-white rounded-full">
                     Login
                 </button>)
                 :

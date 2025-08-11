@@ -1,10 +1,14 @@
 import logo from "./logo.svg";
+import logo2 from "./logo2.svg";
 import search_icon from "./search_icon.svg";
 import remove_icon from "./remove_icon.svg";
 import arrow_right_icon_colored from "./arrow_right_icon_colored.svg";
 import star_icon from "./star_icon.svg";
+import star2_icon from "./star2_icon.svg";
 import star_dull_icon from "./star_dull_icon.svg";
+import star2_dull_icon from "./star2_dull_icon.svg";
 import cart_icon from "./cart_icon.svg";
+import cart2_icon from "./cart2_icon.svg";
 import nav_cart_icon from "./nav_cart_icon.svg";
 import add_icon from "./add_icon.svg";
 import refresh_icon from "./refresh_icon.svg";
@@ -14,6 +18,7 @@ import upload_area from "./upload_area.png";
 import profile_icon from "./profile_icon.png";
 import menu_icon from "./menu_icon.svg";
 import delivery_truck_icon from "./delivery_truck_icon.svg";
+import banner_bullet from "./banner_bullet.svg";
 import leaf_icon from "./leaf_icon.svg";
 import coin_icon from "./coin_icon.svg";
 import box_icon from "./box_icon.svg";
@@ -21,9 +26,13 @@ import trust_icon from "./trust_icon.svg";
 import black_arrow_icon from "./black_arrow_icon.svg";
 import white_arrow_icon from "./white_arrow_icon.svg";
 import main_banner_bg from "./main_banner_bg.png";
+import main2_banner_bg from "./main2_banner_bg.png";
 import main_banner_bg_sm from "./main_banner_bg_sm.png";
+import main2_banner_bg_sm from "./main2_banner_bg_sm.png";
 import bottom_banner_image from "./bottom_banner_image.png";
+import bottom_banner_image2 from "./bottom_banner_image2.png";
 import bottom_banner_image_sm from "./bottom_banner_image_sm.png";
+import bottom_banner_image2_sm from "./bottom_banner_image2_sm.png";
 import add_address_iamge from "./add_address_image.svg";
 import organic_vegitable_image from "./organic_vegitable_image.png";
 import fresh_fruits_image from "./fresh_fruits_image.png";
@@ -69,15 +78,31 @@ import vanilla_muffins_image from "./vanilla_muffins_image.png";
 import quinoa_image from "./quinoa_image.png";
 import brown_rice_image from "./brown_rice_image.png";
 import barley_image from "./barley_image.png";
+import cat_veg from "./cat_veg.png";
+import cat_snacks from "./cat_snacks.png";
+import cat_grains from "./cat_grains.png";
+import cat_fruits from "./cat_fruits.png";
+import cat_drinks from "./cat_drinks.png";
+import cat_dairy from "./cat_dairy.png";
+import cat_bread from "./cat_bread.png";
+
+const root = document.documentElement;
+const computedStyles = getComputedStyle(root);
+const fontScriptValue = computedStyles.getPropertyValue('--color-primary');
+const fontScriptValue2 = computedStyles.getPropertyValue('--color-primary-green');
 
 export const assets = {
   logo,
+  logo2,
   search_icon,
   remove_icon,
   arrow_right_icon_colored,
   star_icon,
+  star2_icon,
   star_dull_icon,
+  star2_dull_icon,
   cart_icon,
+  cart2_icon,
   nav_cart_icon,
   add_icon,
   refresh_icon,
@@ -87,15 +112,20 @@ export const assets = {
   profile_icon,
   menu_icon,
   delivery_truck_icon,
+  banner_bullet,
   leaf_icon,
   coin_icon,
   trust_icon,
   black_arrow_icon,
   white_arrow_icon,
   main_banner_bg,
+  main2_banner_bg,
   main_banner_bg_sm,
+  main2_banner_bg_sm,
   bottom_banner_image,
+  bottom_banner_image2,
   bottom_banner_image_sm,
+  bottom_banner_image2_sm,
   add_address_iamge,
   box_icon,
 };
@@ -104,44 +134,51 @@ export const categories = [
   {
     text: "Organic veggies",
     path: "Vegetables",
-    image: organic_vegitable_image,
-    bgColor: "#FEF6DA",
+    image: cat_veg,
+    // bgColor: "#FEF6DA",
+    bgColor: fontScriptValue,
   },
   {
     text: "Fresh Fruits",
     path: "Fruits",
-    image: fresh_fruits_image,
-    bgColor: "#FEE0E0",
+    image: cat_fruits,
+    bgColor: fontScriptValue2,
+    // bgColor: "#FEE0E0",
   },
   {
     text: "Cold Drinks",
     path: "Drinks",
-    image: bottles_image,
-    bgColor: "#F0F5DE",
+    image: cat_drinks,
+    bgColor: fontScriptValue,
+    // bgColor: "#F0F5DE",
   },
   {
     text: "Instant Food",
     path: "Instant",
-    image: maggi_image,
-    bgColor: "#E1F5EC",
+    image: cat_snacks,
+    bgColor: fontScriptValue2,
+    // bgColor: "#E1F5EC",
   },
   {
     text: "Dairy Products",
     path: "Dairy",
-    image: dairy_product_image,
-    bgColor: "#FEE6CD",
+    image: cat_dairy,
+    bgColor: fontScriptValue,
+    // bgColor: "#FEE6CD",
   },
   {
     text: "Bakery & Breads",
     path: "Bakery",
-    image: bakery_image,
-    bgColor: "#E0F6FE",
+    image: cat_bread,
+    bgColor: fontScriptValue2,
+    // bgColor: "#E0F6FE",
   },
   {
     text: "Grains & Cereals",
     path: "Grains",
-    image: grain_image,
-    bgColor: "#F1E3F9",
+    image: cat_grains,
+    bgColor: fontScriptValue,
+    // bgColor: "#F1E3F9",
   },
 ];
 
@@ -179,24 +216,24 @@ export const footerLinks = [
 
 export const features = [
   {
-    icon: delivery_truck_icon,
-    title: "Fastest Delivery",
-    description: "Groceries delivered in under 30 minutes.",
+    icon: banner_bullet,
+    title: "🥬 Fresh and Quality Products",
+    description: "Only the best fruits, veggies, and groceries.",
   },
   {
-    icon: leaf_icon,
-    title: "Freshness Guaranteed",
-    description: "Fresh produce straight from the source.",
+    icon: banner_bullet,
+    title: "🛒 One-Stop Online Supermarket",
+    description: "Everything you need in one place.",
   },
   {
-    icon: coin_icon,
-    title: "Affordable Prices",
-    description: "Quality groceries at unbeatable prices.",
+    icon: banner_bullet,
+    title: "🚚 Fast and Reliable Delivery",
+    description: "Groceries delivered straight to your door.",
   },
   {
-    icon: trust_icon,
-    title: "Trusted by Thousands",
-    description: "Loved by 10,000+ happy customers.",
+    icon: banner_bullet,
+    title: "💸 Affordable Prices",
+    description: "Great deals every day.",
   },
 ];
 

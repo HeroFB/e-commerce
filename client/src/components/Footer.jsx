@@ -7,7 +7,7 @@ const Footer = () => {
         <div className="px-6 md:px-16 lg:px-24 xl:px-32 mt-24 bg-primary/10">
             <div className="flex flex-col md:flex-row items-start justify-between gap-10 py-10 border-b border-gray-500/30 text-gray-500">
                 <div>
-                    <img className="w-34 md:w-32" src={assets.logo} alt="dummyLogoColored" />
+                    <img className="w-34 md:w-32" src={assets.logo2} alt="dummyLogoColored" />
                     <p className="max-w-[410px] mt-6">We deliver fresh groceries right to your door. We aim to provide service to people even in their homes!</p>
                 </div>
                 <div className="flex flex-wrap justify-between w-full md:w-[45%] gap-5">
@@ -26,7 +26,7 @@ const Footer = () => {
                 </div>
             </div>
             <p className="py-4 text-center text-sm md:text-base">
-                Copyright {new Date().getFullYear()} © Grows-Array All Right Reserved.
+                Copyright {new Date().getFullYear()} © Hey!Buy All Right Reserved.
             </p>
         </div>
     );
